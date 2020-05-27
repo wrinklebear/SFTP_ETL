@@ -1,0 +1,11 @@
+{
+    "python.pythonPath": "/usr/local/bin/python",
+    "python.venvPath": "E:\\python_analysis",
+    "python.venvFolders": [
+        "envs",
+        ".pyenv",
+        ".direnv",
+        ".env",
+        "venv"
+    ]
+}

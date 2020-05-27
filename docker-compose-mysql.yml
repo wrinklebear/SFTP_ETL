@@ -1,0 +1,21 @@
+version: '3'
+services:
+    ##mysql配置
+    mysql:
+        environment:
+            ##root账号的密码
+            MYSQL_ROOT_PASSWORD: "648451kobe"
+            MYSQL_USER: 'aaocking'
+            MYSQL_PASS: '648451kobe'
+        image: "docker.io/mysql:latest" 
+        container_name: mysql
+        restart: always
+        ##映射挂载
+        volumes:
+            ##数据目录，要确保先创建好
+            - "/geo_echart/mysql/db:/var/lib/mysql"
+            - "/geo_echart/mysql/conf/my.cnf:/etc/my.cnf"
+            ##初始化的脚本，初始化我们存放的init.sql文件
+            - "/geo_echart/mysql/init:/docker-entrypoint-initdb.d/"
+        ports:
+            - "3306:3306"
