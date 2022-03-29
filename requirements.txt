@@ -6,7 +6,7 @@ Flask-SQLAlchemy==2.4.1
 Jinja2==2.11.2
 numpy==1.18.2
 pandas==1.0.3
-paramiko==2.7.1
+paramiko==2.10.1
 pymssql==2.1.4
 PyMySQL==0.9.3
 six==1.14.0
